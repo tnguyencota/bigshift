@@ -81,7 +81,8 @@ module BigShift
 
       def big_query_type
         case @type
-        when /^character/, /^numeric/, 'date' then 'STRING'
+        when /^character/, /^numeric/ then 'STRING'
+        when 'date' then 'DATE'
         when /^timestamp/ then 'TIMESTAMP'
         when /int/ then 'INTEGER'
         when 'boolean' then 'BOOLEAN'

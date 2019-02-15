@@ -40,7 +40,7 @@ module BigShift
                 message << " in #{error.location}" if error.location
                 @logger.debug(message)
               end
-              raise job.status.error_result.message
+              raise job.status.errors
             end
           else
             state = job.status && job.status.state

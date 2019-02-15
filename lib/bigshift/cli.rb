@@ -211,10 +211,10 @@ module BigShift
     end
 
     def s3_resource
-      @s3_resource ||= Aws::S3::Resource.new(
-        region: aws_region,
-        credentials: aws_credentials
-      )
+#      @s3_resource ||= Aws::S3::Resource.new(
+#        region: aws_region,
+#        credentials: aws_credentials
+#      )
     end
 
     def logger

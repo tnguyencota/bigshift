@@ -16,7 +16,6 @@ module BigShift
       unload_sql = %Q<UNLOAD ('#{select_sql}')>
       unload_sql << %Q< TO '#{s3_uri}'>
       unload_sql << %Q< CREDENTIALS '#{credentials_string}'>
-      unload_sql << %q< MANIFEST>
       unload_sql << %q< DELIMITER '\t'>
       unload_sql << %q< GZIP> if options[:compression] || options[:compression].nil?
       unload_sql << %q< ALLOWOVERWRITE> if options[:allow_overwrite]
